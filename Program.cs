@@ -1,4 +1,4 @@
-﻿
+﻿using csharp.Models;
 
 namespace csharp
 {
@@ -42,13 +42,30 @@ namespace csharp
             }
 
 
+            Console.WriteLine(sumar(21 ,33));
+            Console.WriteLine("-----------------------------Clases----------------------------");
+
+
+            Bebida bebida = new("Postobón", 1500);
+            Console.WriteLine(bebida.Nombre);
+            Console.WriteLine(bebida.Cantidad);
+            bebida.Beberse(190);
+            Console.WriteLine(bebida.Cantidad);
+
+            Console.WriteLine("---------------------------------------------------------------");
+
+            Cerveza cerveza = new Cerveza();
+            Console.WriteLine(cerveza.Nombre);
+            Console.WriteLine(cerveza.Cantidad);
+            cerveza.Beberse(123);
+            Console.WriteLine(cerveza.Cantidad);
         }
         public static int sumar(int a, int b)
         {
             return a + b;
         }
 
-
+     
     }
 }
 
